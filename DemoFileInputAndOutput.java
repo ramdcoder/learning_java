@@ -2,6 +2,7 @@ import java.util.*;
 import java.nio.file.Path;
 import java.nio.charset.StandardCharsets;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 public class DemoFileInputAndOutput
 {
@@ -15,5 +16,8 @@ public class DemoFileInputAndOutput
         {
             System.out.println(in.nextLine());
         }
+
+        PrintWriter out = new PrintWriter("writtenFile.txt", StandardCharsets.UTF_8);
+        
     }
 }
