@@ -1,3 +1,5 @@
+import java.util.Arrays; //necessário para utilizar método Arrays.toString()
+
 public class DemoArrays
 {
     /** Criação de arrays em java **/
@@ -33,6 +35,13 @@ public class DemoArrays
         System.out.println("Loop for para apresentar os elementos de um array declarado e inicializado com new int[25]. Como o array é de integer, os valores são zero por padrão:");
         for (int i = 0; i < myIntegerArray.length; i++)
             System.out.println(myIntegerArray[i]); // um array de integer é criado com zeros por padrão
+
+        System.out.println("Outra forma de apresentar os elemetos de um Array: o loop Each For");
+        for (int element : myIntegerArray)
+            System.out.println(element);
+
+        System.out.println("Apresentando os elementos através do método Arrays.toString(nomeDoArray):");
+        System.out.println(Arrays.toString(myIntegerArray));
 
     }
 }
