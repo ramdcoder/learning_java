@@ -29,6 +29,7 @@ class Employee
         return name;
     }
 
+    // todos esses métodos get... são métodos acessores. Eles não modificam nada, apenas acessam os campos de instância. Importante: nunca retorne um tipo de objeto que seja mutável através de um método acessor. Se fizer isso, a encapsulation foi quebrada e qualquer alteração que o usuário faça no resultado da chamada do método acessor, poderá modificar o estado da instância. Se for necessário retornar um objeto mutável, crie antes um clone. Ex.: ... return (Date) hireDay.clone(); Assim é criado um clone e o clone é retornado. Se o clone for alterado, o estado da instância não será.
     public double getSalary()
     {
         return salary;
