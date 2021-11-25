@@ -6,17 +6,22 @@ class Employee
     * Criação de classe para praticar.
     * @version 0.1 2021-11-24
     **/
+
+    // keyword private = apenas os métodos dessa classe possuem acesso a essa variável [encapsulation]
     private String name;
     private double salary;
     private LocalDate hireDay;
 
+    // constructor tem o mesmo nome da classe e é rodado todas as vezes que iniciamos um objeto dessa classe. Ele configura o estado inicial das variáveis da instância que está sendo criada. O constructor só é chamado quando está associado a keyword new.
     public Employee(String n, double s, int year, int month, int day)
     {
+        //Cuidado: aqui não devemos declarar o tipo, se não estariamos criando variáveis locais com os mesmos nomes dos campos de instância. Ex.: String name = n; ERRADO. 
         name = n;
         salary = s;
         hireDay = LocalDate.of(year, month, day);
     }
 
+    // keyword public = qualquer método de qualquer classe pode acessar esse método da classe Employee
     public String getName()
     {
         return name;
