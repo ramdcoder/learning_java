@@ -9,7 +9,7 @@ class Employee
     **/
 
     // keyword private = apenas os métodos dessa classe possuem acesso a essa variável [encapsulation]
-    private String name;
+    private final String name; // keyword final = o campo da instância precisa ser inicializado quando o objeto for construído. Não haverá método para modificá-lo posteriormente. Ex.: não vai existir o método setName nessa classe.
     private double salary;
     private LocalDate hireDay;
 
