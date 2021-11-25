@@ -39,9 +39,14 @@ class Employee
         return hireDay;
     }
 
+    /* parâmetros implícitos e explícitos.
+    * Implícitos - o objeto do tipo Employee que aparece antes da chamada desse método. É o target ou receiver do método. Ex.: hammer.raiseSalary(5);
+    * Explícitos - parâmetros listados explícitamente na declaração do método. Ex.: o double byPercent.
+    * Em qualquer método, a keyword this se refere ao parâmetro implícito. Poderíamos escrever: this.salary. Vantagem: distinção clara entre campos de instância e variáveis locais.
+    */
     public void raiseSalary(double byPercent)
     {
-        double raise = salary * byPercent/100;
-        salary += raise;
+        double raise = this.salary * byPercent/100;
+        this.salary += raise;
     }
 }
