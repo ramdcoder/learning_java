@@ -5,8 +5,12 @@ class Employee
 {
     /**
     * Criação de classe para praticar.
-    * @version 0.1 2021-11-24
+    * @version 0.2 2021-11-25
     **/
+
+    // keyword static = esse campo pertence a classe e não a um objeto específico. id pertence ao objeto, cada objeto terá um. Mas nextId pertence a classe.
+    private static int nextId = 1;
+    private int id;
 
     // keyword private = apenas os métodos dessa classe possuem acesso a essa variável [encapsulation]
     private final String name; // keyword final = o campo da instância precisa ser inicializado quando o objeto for construído. Não haverá método para modificá-lo posteriormente. Ex.: não vai existir o método setName nessa classe.
@@ -22,7 +26,27 @@ class Employee
         name = n;
         salary = s;
         hireDay = LocalDate.of(year, month, day);
+        id = setId();
     }
+
+    public int setId()
+    {
+        this.id = nextId;
+        nextId++;
+        return this.id;
+    }
+
+    public int getId()
+    {
+        return this.id;
+    }
+
+    public static int getNextId()
+    {
+        return nextId;
+    }
+
+
 
     // keyword public = qualquer método de qualquer classe pode acessar esse método da classe Employee
     public String getName()
