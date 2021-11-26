@@ -17,8 +17,10 @@ public class EmployeeTest
         //print information about the employess
         for (Employee e : staff)
         {
-            System.out.println("Name: " + e.getName() + ", Salary: " + e.getSalary() + ", Hire day: " + e.getHireDay());
+            System.out.println("Name: " + e.getName() + ", Salary: " + e.getSalary() + ", Hire day: " + e.getHireDay() + "Employee Id: " + e.getId());
         }
+
+        System.out.print(Employee.getNextId());
     }
 
 }
