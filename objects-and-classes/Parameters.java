@@ -22,7 +22,7 @@ public class Parameters
         //métodos podem alterar o estado de uma instância
         System.out.println();
         System.out.println("Does a method can change the state of an object parameter?");
-        System.out.println("\nTesting with .tripleSalary():");
+        System.out.println("\nTesting with tripleSalary():");
         System.out.println("Creating an instance of class Employee...");
         var harry = new Employee("Harry", 50000);
         System.out.println("Salary before calling tripleSalary: " + harry.getSalary());
@@ -31,6 +31,17 @@ public class Parameters
         System.out.println("Salary after calling tripleSalary: " + harry.getSalary());
         System.out.println("Response to question: Yes.\n");
         System.out.println("--".repeat(15));
+
+        //métodos não podem fixar novos objetos a objetos parâmetros
+        System.out.println();
+        System.out.println("Does a method can attach new objects to object parameters?");
+        System.out.println("\nTesting with swap():");
+        System.out.println("Creating two instances of class Employee...");
+        var richard = new Employee("Richard", 45000);
+        var jana = new Employee("Jana", 90000);
+        System.out.println("Names before calling swap():");
+        System.out.println("Before richard - Name: " + richard.getName());
+        System.out.println("Before jana - Name: " + jana.getName());
 
 
     } //main
@@ -63,6 +74,11 @@ class Employee
     public double getSalary()
     {
         return this.salary;
+    }
+
+    public String getName()
+    {
+        return this.name;
     }
 
     public void raiseSalary(double byPercent)
