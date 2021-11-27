@@ -47,6 +47,11 @@ public class Parameters
         System.out.println("Names after the call of swap:");
         System.out.println("After richard - Name: " + richard.getName());
         System.out.println("After jana - Name: " + jana.getName());
+        System.out.println("Response to question: No.\n");
+        System.out.println("--".repeat(15));
+
+        System.out.println("End of program.");
+        System.out.println("--".repeat(15));
 
     } //main
 
