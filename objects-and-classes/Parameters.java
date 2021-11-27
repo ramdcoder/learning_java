@@ -25,6 +25,13 @@ public class Parameters
         System.out.println("\nTesting with .tripleSalary():");
         System.out.println("Creating an instance of class Employee...");
         var harry = new Employee("Harry", 50000);
+        System.out.println("Salary before calling tripleSalary: " + harry.getSalary());
+        System.out.println("Calling method...");
+        tripleSalary(harry);
+        System.out.println("Salary after calling tripleSalary: " + harry.getSalary());
+        System.out.println("Response to question: Yes.\n");
+        System.out.println("--".repeat(15));
+
 
     } //main
 
@@ -32,6 +39,12 @@ public class Parameters
     {
         value *= 3;
         System.out.println("End of tripleValue method: value = " + value);
+    }
+
+    public static void tripleSalary(Employee anEmployee)
+    {
+        anEmployee.raiseSalary(200);
+        System.out.println("End of method. Salary: " + anEmployee.getSalary());
     }
 
 } //Parameters
@@ -45,5 +58,16 @@ class Employee
     {
         this.name = n;
         this.salary = s;
+    }
+
+    public double getSalary()
+    {
+        return this.salary;
+    }
+
+    public void raiseSalary(double byPercent)
+    {
+        double raise = this.salary * byPercent / 100;
+        this.salary += raise;
     }
 }
