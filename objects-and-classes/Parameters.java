@@ -42,7 +42,11 @@ public class Parameters
         System.out.println("Names before calling swap():");
         System.out.println("Before richard - Name: " + richard.getName());
         System.out.println("Before jana - Name: " + jana.getName());
-
+        System.out.println("Calling swap on the two Employee instances to exchange their names...");
+        swap(richard, jana);
+        System.out.println("Names after the call of swap:");
+        System.out.println("After richard - Name: " + richard.getName());
+        System.out.println("After jana - Name: " + jana.getName());
 
     } //main
 
@@ -56,6 +60,16 @@ public class Parameters
     {
         anEmployee.raiseSalary(200);
         System.out.println("End of method. Salary: " + anEmployee.getSalary());
+    }
+
+    public static void swap(Employee a, Employee b)
+    {
+        Employee temp = a;
+        a = b;
+        b = temp;
+        System.out.println("End of method...");
+        System.out.println("richard: name = " + a.getName());
+        System.out.println("jana: name = " + b.getName());
     }
 
 } //Parameters
